@@ -1,0 +1,60 @@
+
+  
+
+<div class="product-container"> 
+  <div class="row" id="ProductInfo">
+    <div class="col-lg-8 col-md-9">
+      <div style="margin: 0px 40px">
+        <div class="product-slider">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">   <%= image_tag @project.image1, :class => "d-block w-100" , :alt => "First slide"%> 
+                  </div>
+                    <div class="carousel-item">   <%= image_tag @project.images.first.name, :class => "d-block w-100" %> 
+                    </div>
+
+            </div>
+          </div>
+          <div class="clearfix">
+            <div class="carousel-control">
+                         <a class="carousel-control" href="#carousel" role="button" data-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span></i> </a> 
+                  <a class="carousel-control" href="#carousel" role="button" data-slide="next"> 
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span> </a> </div>
+            </div>
+
+                <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <div data-target="#carousel" data-slide-to="0" class="thumb"> <%= image_tag @project.image1%> </div>
+                      <div data-target="#carousel" data-slide-to="2" class="thumb"> <%= image_tag @project.images.first.name%></div>
+
+                      
+                     
+                    </div>
+                    <div class="carousel-item">
+                      <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="http://placehold.it/100x80?text=Thumb+06"></div>
+                      <% if  @images.third.present? %>
+
+                      <div data-target="#carousel" data-slide-to="4" class="thumb"> <%= image_tag @project.images.third.name%></div>
+                      <%end %>
+                      <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="http://placehold.it/100x80?text=Thumb+07"></div>
+                    </div>
+                    
+               </div>
+                <!-- <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev"> <i class="fa fa-angle-left" aria-hidden="true"></i> </a> <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i> </a>  -->
+              </div>
+             </div>
+          </div>
+        </div>
+
+          <div class="col-lg-4 col-md-3">
+            <div class="project-intro">
+              <h2 class="project-title"><%= @project.title %></h2>
+              <p class="project-description"><%= @project.description %></p>
+            </div>  
+          </div>
+      </div>
+</div>
+
+
