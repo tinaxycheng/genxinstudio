@@ -56,4 +56,5 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'rails_admin', '~> 2.0'
 
-gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 5.11.2'
+
